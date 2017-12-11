@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DCC Eastern Adventures Zero Level Character Generator</title>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+<script type="text/javascript" src="./js/occupations.js"></script>
+<script type="text/javascript" src="./js/languages.js"></script>
+<script type="text/javascript" src="./js/luckysigns.js"></script>
+<script type="text/javascript" src="./js/startingequipment.js"></script>
+<script type="text/javascript" src="./js/dieroll.js"></script>
+<script type="text/javascript" src="./js/abilityScoreModifiers.js"></script>
+<script type="text/javascript" src="./js/adjustments.js"></script>
+ 
+	<meta charset="UTF-8">
+	<meta name="description" content="Dungeon Crawl Classics Zero Level Character Generator. Goodman Games.">
+	<meta name="keywords" content="Dungeon Crawl Classics, Goodman Games,HTML5,CSS,JavaScript">
+	<meta name="author" content="Mark Tasaka 2017">
+		
+
+	<link rel="stylesheet" type="text/css" href="css/dcc_four_sheet.css">
+</head>
+<body>
+	
+    <!-- jQuery -->
+
+  <img id="character_sheet"/>
+   <section>
+	   <aside id="topleft">
+    	<p id="name0"></p>
+        <p id="gender0"></p> 
+		<span id="strength0"></span> <span id="strengthMod0"></span>
+		<span id="agility0"></span>  <span id="agilityMod0"></span>
+		<span id="stamina0"></span>  <span id="staminaMod0"></span>
+		<span id="personality0"></span> <span id="personalityMod0"></span>
+		<span id="intelligence0"></span> <span id="intelligenceMod0"></span>
+		<span id="luck0"></span> <span id="luckMod0"></span>
+		       
+		<p id="occupation0"></p>
+		   
+		<span id="trainedWeapon0"></span> 
+		<span id="trainedWeaponDamage0"></span>
+		<p id="tradeGoods0"></p>
+		<p id="startingEquipment0"></p>   
+		
+		<p id="birthAugur0"><span id="luckySign0"></span>: <span id="luckyRoll0"></span> (<span id="LuckySignBonus0"></span>)</p>
+		
+		<span id="hitPoints0"></span> 
+		  
+		   <span id="modifiedArmourClass0"></span> <span id="baseArmourClass0"></span>
+		
+		<p id="armour0"></p>
+		   
+		<p id="languages0"><span id="baseLanguages0"></span><span id="bonusLanguages0"></span></p>
+		   
+		<span id="fumbleDie0"></span>
+		<span id="critDie0"></span>
+		<span id="critTable0"></span>
+		   
+		   
+		<span id="melee0"></span>
+		 <span id="range0"></span>
+		<span id="meleeDamage0"></span>
+		 <span id="rangeDamage0"></span>
+		
+		 <span id="speed0"></span>
+		   <span id="ref0"></span>
+		   <span id="fort0"></span>
+		   <span id="will0"></span>
+		   
+		   <span id="init0"></span>
+		   
+		   
+		   <span id="wealth0"></span>
+		   <span id="raceAbilities0"></span>
+		   
+		   <span id="dieRollMethod0"></span>
+		   
+		</aside>
+
+		
+	   <aside id="topright">
+		    	<p id="name1"></p>
+        <p id="gender1"></p> 
+		<span id="strength1"></span> <span id="strengthMod1"></span>
+		<span id="agility1"></span>  <span id="agilityMod1"></span>
+		<span id="stamina1"></span>  <span id="staminaMod1"></span>
+		<span id="personality1"></span> <span id="personalityMod1"></span>
+		<span id="intelligence1"></span> <span id="intelligenceMod1"></span>
+		<span id="luck1"></span> <span id="luckMod1"></span>
+		   
+		<p id="occupation1"></p>
+		   
+		<span id="trainedWeapon1"></span> 
+		<span id="trainedWeaponDamage1"></span>
+		<p id="tradeGoods1"></p>
+		<p id="startingEquipment1"></p>   
+		
+		<p id="birthAugur1"><span id="luckySign1"></span>: <span id="luckyRoll1"></span> (<span id="LuckySignBonus1"></span>)</p>
+		
+		<span id="hitPoints1"></span> 
+		  
+		   <span id="modifiedArmourClass1"></span> <span id="baseArmourClass1"></span>
+		
+		<p id="armour1"></p>
+		   
+		<p id="languages1"><span id="baseLanguages1"></span><span id="bonusLanguages1"></span></p>
+		   
+		<span id="fumbleDie1"></span>
+		<span id="critDie1"></span>
+		<span id="critTable1"></span>
+		   
+		   
+		<span id="melee1"></span>
+		 <span id="range1"></span>
+		<span id="meleeDamage1"></span>
+		 <span id="rangeDamage1"></span>
+		
+		 <span id="speed1"></span>
+		   <span id="ref1"></span>
+		   <span id="fort1"></span>
+		   <span id="will1"></span>
+		   
+		   <span id="init1"></span>
+		   
+		   
+		   <span id="wealth1"></span>
+		   <span id="raceAbilities1"></span>
+		   
+		   <span id="dieRollMethod1"></span>
+	   </aside>
+	   
+	   	   <aside id="bottomleft">
+		    	<p id="name2"></p>
+        <p id="gender2"></p> 
+		<span id="strength2"></span> <span id="strengthMod2"></span>
+		<span id="agility2"></span>  <span id="agilityMod2"></span>
+		<span id="stamina2"></span>  <span id="staminaMod2"></span>
+		<span id="personality2"></span> <span id="personalityMod2"></span>
+		<span id="intelligence2"></span> <span id="intelligenceMod2"></span>
+		<span id="luck2"></span> <span id="luckMod2"></span>
+		   
+		<p id="occupation2"></p>
+		   
+		<span id="trainedWeapon2"></span> 
+		<span id="trainedWeaponDamage2"></span>
+		<p id="tradeGoods2"></p>
+		<p id="startingEquipment2"></p>   
+		
+		<p id="birthAugur2"><span id="luckySign2"></span>: <span id="luckyRoll2"></span> (<span id="LuckySignBonus2"></span>)</p>
+		
+		<span id="hitPoints2"></span> 
+		  
+		   <span id="modifiedArmourClass2"></span> <span id="baseArmourClass2"></span>
+		
+		<p id="armour2"></p>
+		   
+		<p id="languages2"><span id="baseLanguages2"></span><span id="bonusLanguages2"></span></p>
+		   
+		<span id="fumbleDie2"></span>
+		<span id="critDie2"></span>
+		<span id="critTable2"></span>
+		   
+		   
+		<span id="melee2"></span>
+		 <span id="range2"></span>
+		<span id="meleeDamage2"></span>
+		 <span id="rangeDamage2"></span>
+		
+		 <span id="speed2"></span>
+		   <span id="ref2"></span>
+		   <span id="fort2"></span>
+		   <span id="will2"></span>
+		   
+		   <span id="init2"></span>
+		   
+		   
+		   <span id="wealth2"></span>
+		   <span id="raceAbilities2"></span>
+		   
+		   <span id="dieRollMethod2"></span>
+	   </aside>
+	   
+	   	   
+	   	<aside id="bottomright">
+		    	<p id="name3"></p>
+        <p id="gender3"></p> 
+		<span id="strength3"></span> <span id="strengthMod3"></span>
+		<span id="agility3"></span>  <span id="agilityMod3"></span>
+		<span id="stamina3"></span>  <span id="staminaMod3"></span>
+		<span id="personality3"></span> <span id="personalityMod3"></span>
+		<span id="intelligence3"></span> <span id="intelligenceMod3"></span>
+		<span id="luck3"></span> <span id="luckMod3"></span>
+		   
+		<p id="occupation3"></p>
+		   
+		<span id="trainedWeapon3"></span> 
+		<span id="trainedWeaponDamage3"></span>
+		<p id="tradeGoods3"></p>
+		<p id="startingEquipment3"></p>   
+		
+		<p id="birthAugur3"><span id="luckySign3"></span>: <span id="luckyRoll3"></span> (<span id="LuckySignBonus3"></span>)</p>
+		
+		<span id="hitPoints3"></span> 
+		  
+		   <span id="modifiedArmourClass3"></span> <span id="baseArmourClass3"></span>
+		
+		<p id="armour3"></p>
+		   
+		<p id="languages3"><span id="baseLanguages3"></span><span id="bonusLanguages3"></span></p>
+		   
+		<span id="fumbleDie3"></span>
+		<span id="critDie3"></span>
+		<span id="critTable3"></span>
+		   
+		   
+		<span id="melee3"></span>
+		 <span id="range3"></span>
+		<span id="meleeDamage3"></span>
+		 <span id="rangeDamage3"></span>
+		
+		 <span id="speed3"></span>
+		   <span id="ref3"></span>
+		   <span id="fort3"></span>
+		   <span id="will3"></span>
+		   
+		   <span id="init3"></span>
+		   
+		   
+		   <span id="wealth3"></span>
+		   <span id="raceAbilities3"></span>
+		   
+		   <span id="dieRollMethod3"></span>
+	   </aside>
+
+
+	   	   
+	</section>
+	
+
+		
+  <script>
+	  
+ 
+	/*
+	 Character() - Zero Level Character Constructor
+	*/
+	function Character() {
+	
+    var strength = rollDice(6, 3, 0, 0);
+    var agility = rollDice(6, 3, 0, 0);
+    var stamina = rollDice(6, 3, 0, 0);
+    var	personality = rollDice(6, 3, 0, 0);
+    var	intelligence = rollDice(6, 3, 0, 0);
+    var	luck = rollDice(6, 3, 0, 0);
+	var	occupation = getOccupation();
+	var birthAugur = getLuckySign();
+	var strengthModifier = getStrengthModifier(strength);
+	var staminaModifier = getStaminaModifier(stamina);
+	var agilityModifier = getAgilityModifier(agility);
+	var personalityModifier = getPersonalityModifier(personality);
+	var intelligenceModifier = getIntelligenceModifier(intelligence);
+	var armour = getArmour(occupation);
+	var armourProtection = getArmourProtection(occupation);
+	var baseAC = getBaseArmourClass(agilityModifier)  + adjustAC(birthAugur, getLuckModifier(luck));
+		
+		var zeroLevelCharacter = {
+			"name": "",
+			"strength": strength,
+			"agility": agility,
+			"stamina": stamina,
+			"personality": personality,
+			"intelligence": intelligence,
+			"luck": luck,
+			"strengthModifier": strengthModifier,
+			"agilityModifier": agilityModifier,
+			"staminaModifier": staminaModifier,
+			"personalityModifier": personalityModifier,
+			"intelligenceModifier": intelligenceModifier,
+			"luckModifier":  getLuckModifier(luck),
+			"occupation":  occupation.occupation,
+			"trainedWeapon": occupation.trainedWeapon,
+			"trainedWeaponDamage": occupation.damage,
+			"tradeGoods": occupation.tradeGoods,
+			"startingEquipment": getStartingEquipment().equipment,
+			"luckySign": birthAugur.luckySign,
+			"luckyRoll": birthAugur.luckyRoll,
+			"luckySignBonus": getLuckModifier(luck),
+			"baseArmourClass": baseAC,
+			"armour": armour,
+			"modifiedArmourClass": baseAC + armourProtection,
+			"baseLanguages": getLanguages (occupation), 
+			"bonusLanguages": getBonusLanguages (intelligenceModifier, birthAugur, getLuckModifier(luck), occupation.race),
+			"hitPoints": Math.floor((Math.random() * 4) + 1) + staminaModifier + hitPointAdjustPerLevel(birthAugur,  getLuckModifier(luck)),
+			"fumbleDie": getFumbleDie (occupation) + "" + addSign(adjustFumble(birthAugur, getLuckModifier(luck))),
+			"critDie": "d4" + addSign(adjustCrit(birthAugur, getLuckModifier(luck))),
+			"critTable": "I",
+			"melee": strengthModifier + meleeAdjust(birthAugur, getLuckModifier(luck)),
+            "meleeDamage": strengthModifier + meleeDamageAdjust(birthAugur, getLuckModifier(luck)),
+			"range": agilityModifier + rangeAdjust(birthAugur, getLuckModifier(luck)),
+			"rangeDamage": rangeDamageAdjust(birthAugur, getLuckModifier(luck)),
+			"speed": getSpeed(occupation) + addLuckToSpeed(birthAugur, getLuckModifier(luck)) + "'",
+			"ref": agilityModifier + adjustRef(birthAugur, getLuckModifier(luck)),
+			"fort": staminaModifier + adjustFort(birthAugur, getLuckModifier(luck)),
+			"will": personalityModifier + adjustWill(birthAugur, getLuckModifier(luck)),
+			"init": agilityModifier + adjustInit(birthAugur, getLuckModifier(luck)),
+			"wealth": Math.floor((Math.random() * 12)) + Math.floor((Math.random() * 12)) + Math.floor((Math.random() * 12)) + Math.floor((Math.random() * 12)) + Math.floor((Math.random() * 12)) + 5 + " mon",
+			"raceAbilities": addRaceAbilities (occupation),
+            "abilityScoreGeneration": "Ability Scores 3d6, d4 hp"
+			
+		
+			
+
+		};
+	    if(zeroLevelCharacter.hitPoints <= 0 ){
+			zeroLevelCharacter.hitPoints = 1;
+		}
+		return zeroLevelCharacter;
+	  
+	  }
+	  
+
+
+	  
+        var imgData = "images/four_character_sheet.png";
+        $("#character_sheet").attr("src", imgData);
+        
+
+	  var data = [Character(),Character(),Character(),Character()];
+	  for(var index = 0; index < 4 ; index++){
+          
+          
+          $("#name" + index).html(data[index].name);
+          $("#occupation" + index).html(data[index].occupation);
+	  
+          $("#strength" + index).html(data[index].strength);
+          $("#strengthMod" + index).html(addModifierSign(data[index].strengthModifier));
+          
+          $("#agility" + index).html(data[index].agility);
+          $("#agilityMod" + index).html(addModifierSign(data[index].agilityModifier));
+          
+          $("#agility" + index).html(data[index].agility);
+          $("#agilityMod" + index).html(addModifierSign(data[index].agilityModifier));
+          
+          $("#stamina" + index).html(data[index].stamina);
+          $("#staminaMod" + index).html(addModifierSign(data[index].staminaModifier));
+          
+          $("#personality" + index).html(data[index].personality);
+          $("#personalityMod" + index).html(addModifierSign(data[index].personalityModifier));
+          
+          $("#intelligence" + index).html(data[index].intelligence);
+          $("#intelligenceMod" + index).html(addModifierSign(data[index].intelligenceModifier));
+          
+          $("#luck" + index).html(data[index].luck);
+          $("#luckMod" + index).html(addModifierSign(data[index].luckModifier));
+          
+          $("#trainedWeapon" + index).html(data[index].trainedWeapon);
+          $("#trainedWeaponDamage" + index).html(data[index].trainedWeaponDamage);
+          $("#tradeGoods" + index).html(data[index].tradeGoods);
+          $("#startingEquipment" + index).html(data[index].startingEquipment);
+ 
+          $("#luckySign" + index).html(data[index].luckySign);
+          $("#luckyRoll" + index).html(data[index].luckyRoll);
+          $("#luckySignBig" + index).html(data[index].luckySign)
+          $("#LuckySignBonus" + index).html(addModifierSign(data[index].luckModifier));
+          
+          $("#hitPoints" + index).html(data[index].hitPoints);
+          
+          $("#baseArmourClass" + index).html(data[index].baseArmourClass);
+          $("#armour" + index).html(data[index].armour);
+          $("#modifiedArmourClass" + index).html(data[index].modifiedArmourClass);
+          $("#baseLanguages" + index).html(data[index].baseLanguages);
+          $("#bonusLanguages" + index).html(data[index].bonusLanguages);
+          $("#melee" + index).html(addModifierSign(data[index].melee));
+          $("#range" + index).html(addModifierSign(data[index].range));
+          $("#meleeDamage" + index).html(addModifierSign(data[index].meleeDamage));
+          $("#rangeDamage" + index).html(addModifierSign(data[index].rangeDamage));
+          
+          $("#fumbleDie" + index).html(data[index].fumbleDie);
+          
+          $("#critDie" + index).html(data[index].critDie);
+          
+          $("#critTable" + index).html(data[index].critTable);
+          
+          $("#speed" + index).html(data[index].speed);
+          
+          $("#ref" + index).html(addModifierSign(data[index].ref));
+          $("#fort" + index).html(addModifierSign(data[index].fort));
+          $("#will" + index).html(addModifierSign(data[index].will));
+          $("#init" + index).html(addModifierSign(data[index].init));
+          
+          $("#wealth" + index).html(data[index].wealth);
+          $("#raceAbilities" + index).html(data[index].raceAbilities);
+          $("#dieRollMethod" + index).html(data[index].abilityScoreGeneration);
+	  
+	  }
+
+  </script>
+		
+	
+    
+</body>
+</html>

@@ -1,0 +1,387 @@
+/* html rules
+--------------------*/
+
+/* id rules
+--------------------*/
+/*
+#sheet{
+    position:relative;
+	display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+*/
+
+/*
+section{
+	min-width: 950px;
+	margin: 0 auto;
+}
+*/
+
+body{
+	font-family: sans-serif;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+#character_sheet{
+    width: 1050px;
+    height: auto;
+	display: block;
+}
+
+#topleft{
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	width: 525px;
+	height: 680px;
+}
+
+#topright{
+	position:absolute;
+	top: 0px;
+	left: 525px;
+	width: 525px;
+	height: 680px;
+}
+
+#bottomleft{
+	position:absolute;
+	top: 680px;
+	left: 0px;
+	width: 525px;
+	height: 680px;
+}
+
+#bottomright{
+	position:absolute;
+	top: 680px;
+	left: 525px;
+	width: 525px;
+	height: 680px;
+}
+/*
+Character 1
+*/
+
+#name0, #name1, #name2, #name3{
+    position: absolute;
+    top: 42px;
+    left: 35px;
+}
+
+
+#genderhead0, #genderhead1, #genderhead2, #genderhead3{
+    position: absolute;
+    top: 40px;
+    left: 160px;
+    font-size: 0.8em;
+}
+
+#gender0, #gender1, #gender2, #gender3{
+    position: absolute;
+    top: 56px;
+    left: 160px;
+}
+
+
+#occupation0, #occupation1, #occupation2, #occupation3{
+    position: absolute;
+    top: 42px;
+    left: 265px;
+}
+
+#modifiedArmourClass0, #modifiedArmourClass1, #modifiedArmourClass2, #modifiedArmourClass3{
+    position: absolute;
+    top: 105px;
+    left: 38px;
+	font-size: 1.6em;
+}
+
+#baseArmourClass0, #baseArmourClass1, #baseArmourClass2, #baseArmourClass3{
+    position: absolute;
+    top: 100px;
+    left: 80px;
+	font-size: 1.6em;
+}
+
+
+
+#trainedWeapon0, #trainedWeapon1, #trainedWeapon2, #trainedWeapon3{
+    position: absolute;
+    top: 340px;
+    left: 290px;
+    width: 180px;
+	font-size: 0.9em;
+}
+
+#trainedWeaponDamage0, #trainedWeaponDamage1, #trainedWeaponDamage2, #trainedWeaponDamage3{
+    position: absolute;
+    top: 343px;
+    left: 470px;
+	font-size: 1em;
+}
+
+
+#tradeGoods0, #tradeGoods1, #tradeGoods2, #tradeGoods3{
+    position: absolute;
+    top: 540px;
+    left: 40px;
+	font-size: 0.8em;
+    width: 200px;
+}
+
+#startingEquipment0, #startingEquipment1, #startingEquipment2, #startingEquipment3{
+    position: absolute;
+    top: 540px;
+    left: 285px;
+	font-size: 0.8em;
+    width: 180px;
+}
+
+
+
+#armour0, #armour1, #armour2, #armour3{
+    position: absolute;
+    top: 590px;
+    left: 40px;
+	font-size: 0.7em;
+} 
+
+
+#raceAbilities0, #raceAbilities1, #raceAbilities2, #raceAbilities3{
+    position: absolute;
+    top: 600px;
+    left: 40px;
+	font-size: 0.7em;
+    width: 410px;
+}
+
+
+#dieRollMethod0, #dieRollMethod1, #dieRollMethod2, #dieRollMethod3{
+    position: absolute;
+    top: 630px;
+    left: 40px;
+	font-size: 0.7em;
+}
+
+
+#birthAugur0, #birthAugur1, #birthAugur2, #birthAugur3{
+    position: absolute;
+    top: 180px;
+    left:  290px;
+	width: 210px;
+	font-size: 0.9em;
+}
+
+
+
+#languages0, #languages1, #languages2, #languages3{
+    position: absolute;
+    top: 255px;
+	font-size: 1em;
+    left:  290px;
+	width: 210px;
+}
+
+
+
+
+#hitPoints0, #hitPoints1, #hitPoints2, #hitPoints3{
+	position: absolute;
+    top: 100px;
+    left: 200px;
+	font-size: 1.6em;
+}
+
+#strength0, #strength1, #strength2, #strength3{
+    position:absolute;
+    top: 160px;
+    left: 165px;
+	font-size: 1.8em;
+}
+
+#strengthMod0, #strengthMod1, #strengthMod2, #strengthMod3{
+    position:absolute;
+    top: 160px;
+    left: 216px;
+	font-size: 1.8em;
+}
+
+
+#agility0, #agility1, #agility2, #agility3{
+    position:absolute;
+    top: 190px;
+    left: 165px;
+	font-size: 1.8em;
+}
+
+#agilityMod0, #agilityMod1, #agilityMod2, #agilityMod3{
+    position:absolute;
+    top: 190px;
+    left: 216px;
+	font-size: 1.8em;
+}
+
+#stamina0, #stamina1, #stamina2, #stamina3{
+    position:absolute;
+    top: 220px;
+    left: 165px;
+	font-size: 1.8em;
+}
+
+#staminaMod0, #staminaMod1, #staminaMod2, #staminaMod3{
+    position:absolute;
+    top: 220px;
+    left: 216px;
+	font-size: 1.8em;
+}
+
+
+#personality0, #personality1, #personality2, #personality3{
+    position:absolute;
+    top: 250px;
+    left: 165px;
+	font-size: 1.8em;
+}
+
+#personalityMod0, #personalityMod1,#personalityMod2, #personalityMod3{
+    position:absolute;
+    top: 250px;
+    left: 216px;
+	font-size: 1.8em;
+}
+
+
+#intelligence0, #intelligence1, #intelligence2, #intelligence3{
+    position:absolute;
+    top: 280px;
+    left: 165px;
+	font-size: 1.8em;
+}
+
+#intelligenceMod0, #intelligenceMod1, #intelligenceMod2, #intelligenceMod3{
+    position:absolute;
+    top: 280px;
+    left: 216px;
+	font-size: 1.8em;
+}
+
+
+
+#luck0, #luck1, #luck2, #luck3{
+    position:absolute;
+    top: 310px;
+    left: 165px;
+	font-size: 1.8em;
+}
+
+#luckMod0, #luckMod1, #luckMod2, #luckMod3{
+    position:absolute;
+    top: 310px;
+    left: 216px;
+	font-size: 1.8em;
+}
+
+
+#fumbleDie0, #fumbleDie1, #fumbleDie2, #fumbleDie3{
+    position: absolute;
+    top: 425px;
+    left:  203px;
+	font-size: 1.2em;
+}
+
+
+#critDie0, #critDie1, #critDie2, #critDie3{
+    position: absolute;
+    top: 108px;
+    left:  255px;
+	font-size: 1.3em;
+}
+
+#critTable0, #critTable1, #critTable2, #critTable3{
+    position: absolute;
+    top: 105px;
+    left:  320px;
+	font-size: 1.6em;
+	font-family: serif;
+}
+
+
+#melee0, #melee1, #melee2, #melee3{
+    position: absolute;
+    top: 103px;
+    left:  433px;
+	font-size: 1.4em;
+}
+
+
+#meleeDamage0, #meleeDamage1, #meleeDamage2, #meleeDamage3{
+    position: absolute;
+    top: 103px;
+    left:  473px;
+	font-size: 1.4em;
+}
+
+
+#range0, #range1, #range2, #range3{
+    position: absolute;
+    top: 130px;
+    left:  433px;
+	font-size: 1.4em;
+}
+
+
+#rangeDamage0, #rangeDamage1, #rangeDamage2, #rangeDamage3{
+    position: absolute;
+    top: 130px;
+    left:  473px;
+	font-size: 1.4em;
+}
+
+#init0, #init1, #init2, #init3{
+    position: absolute;
+    top: 370px;
+    left:  215px;
+	font-size: 1.4em;
+}
+
+#speed0, #speed1, #speed2, #speed3{
+    position: absolute;
+    top: 395px;
+    left:  215px;
+	font-size: 1.4em;
+}
+
+#ref0, #ref1, #ref2, #ref3{
+    position: absolute;
+    top: 370px;
+    left:  90px;
+	font-size: 1.4em;
+}
+
+
+#fort0, #fort1, #fort2, #fort3{
+    position: absolute;
+    top: 396px;
+    left:  90px;
+	font-size: 1.4em;
+}
+
+#will0, #will1, #will2, #will3{
+    position: absolute;
+    top: 424px;
+    left:  90px;
+	font-size: 1.4em;
+}
+
+#wealth0, #wealth1, #wealth2, #wealth3{
+    position: absolute;
+    top: 405px;
+    left:  300px;
+	font-size: 1em;
+}
+
+

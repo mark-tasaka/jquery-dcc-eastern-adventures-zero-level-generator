@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GitHub Dungeon Crawl Classics Eastern Adventures Zero-Level Character Generator</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Mark Tasaka 2017">
+
+
+	<link rel="stylesheet" href="css/mcc_github.css"  />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="utf-8" />
+
+
+	</head>
+	
+	
+<body>
+    <section>
+
+		
+		<h1>Dungeon Crawl Classics Eastern Adventures Zero-Level Character Generator(JQuery)</h1>
+		
+		<p>Welcome to the Launch Page of the Dungeon Crawl Classics Eastern Adventures Zero-Level Character Generator.  The Zero-Level Character Generator is designed using JavaScript/JQuery and produce playable characters consistent with Goodman Games’ Dungeon Crawl Classics Pen and Paper Roleplaying System.</p>
+		
+		<p>For more information on the Dungeon Crawl Classics Game System, please visit:</p>
+		
+		<p><a href="http://goodman-games.com/" target="_blank" class="links">http://goodman-games.com/</a></p>
+		
+		<p>To see the generator used in the contents of the web, please visit:</p>
+		
+		<p><a href="http://www.oldschooladventures.org/ea" target="_blank" class="links">http://www.oldschooladventures.org/ea</a></p>
+		
+		
+		<h2>Zero-Level DCC Character Generator</h2>
+			
+		<div class="content">
+		
+
+			
+		<form action="" id ="myForm"  target="_blank">
+			
+			
+            <div class="content">
+
+                 
+			  <select id="abilityScores" class="dropdownmenu">
+				<option value="1" selected>3d6</option>
+				<option value="2">4d6&#42;</option>
+			  </select>
+			
+			  <select id="hitPoints" class="dropdownmenu2">
+				<option value="1"  selected id="d4">d4 hp</option>
+				<option value="2" id="max">max hp</option>
+			  </select>
+            			  
+            <select id="names" class="dropdownmenu3">
+				<option value="1"  selected>no names</option>
+				<option value="2">random names&#42;&#42;</option>
+			  </select>
+
+			
+			<div class="generatorb">
+			<span class="generatorbuttons">
+
+				<input type="submit" value="Generate Character" id="generate_level0_characters"/>
+			</span>
+				
+			<span class="generatorbuttons">
+				<input type="reset"  value="Reset Generator" id="reset__level0_characters"/>
+		
+				</span>
+				</div>
+                </div>
+				</form>
+    </div>
+        
+		<p><span class="footnote">&#42;Rolling 4d6, and dropping the lowest die.</span></p>
+		<p><span class="footnote">&#42;&#42;As the zero-level characters start out as peasants, they will only have a given name (surnames/family names are reserved for those of privilege, and can be chosen once the characters have reached 1st level).</span></p>
+
+</section>
+
+
+	<script>
+        $("#generate_level0_characters").click(function(){
+         
+            $("#myForm").attr('action', "zero_level/dcc_ea_lv0_" + $("#abilityScores").val() + $("#hitPoints").val() + $("#names").val() +  ".html");
+        });
+        
+		
+
+	</script>
+        
+
+
+</body>
+    
+</html>
