@@ -1,5 +1,5 @@
 function maleFirstNames() {
-	var firstNameMale = [
+	let firstNameMale = [
 		{"name": "Akemi"},
 		{"name": "Akihiko"},
 		{"name": "Akio"},
@@ -38,7 +38,7 @@ function maleFirstNames() {
 	  
 
 function femaleFirstNames() {
-	var firstNameFemale = [
+	let firstNameFemale = [
 		{"name": "Akako"},
 		{"name": "Akasuki"},
 		{"name": "Aki"},

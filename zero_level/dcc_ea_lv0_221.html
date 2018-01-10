@@ -244,24 +244,24 @@
 	*/
 	function Character() {
 	
-    var strength = rollDice(6, 4, 1, 0);
-    var agility = rollDice(6, 4, 1, 0);
-    var stamina = rollDice(6, 4, 1, 0);
-    var	personality = rollDice(6, 4, 1, 0);
-    var	intelligence = rollDice(6, 4, 1, 0);
-    var	luck = rollDice(6, 4, 1, 0);
-	var	occupation = getOccupation();
-	var birthAugur = getLuckySign();
-	var strengthModifier = getStrengthModifier(strength);
-	var staminaModifier = getStaminaModifier(stamina);
-	var agilityModifier = getAgilityModifier(agility);
-	var personalityModifier = getPersonalityModifier(personality);
-	var intelligenceModifier = getIntelligenceModifier(intelligence);
-	var armour = getArmour(occupation);
-	var armourProtection = getArmourProtection(occupation);
-	var baseAC = getBaseArmourClass(agilityModifier)  + adjustAC(birthAugur, getLuckModifier(luck));
+    let strength = rollDice(6, 4, 1, 0);
+    let agility = rollDice(6, 4, 1, 0);
+    let stamina = rollDice(6, 4, 1, 0);
+    let	personality = rollDice(6, 4, 1, 0);
+    let	intelligence = rollDice(6, 4, 1, 0);
+    let	luck = rollDice(6, 4, 1, 0);
+	let	occupation = getOccupation();
+	let birthAugur = getLuckySign();
+	let strengthModifier = getStrengthModifier(strength);
+	let staminaModifier = getStaminaModifier(stamina);
+	let agilityModifier = getAgilityModifier(agility);
+	let personalityModifier = getPersonalityModifier(personality);
+	let intelligenceModifier = getIntelligenceModifier(intelligence);
+	let armour = getArmour(occupation);
+	let armourProtection = getArmourProtection(occupation);
+	let baseAC = getBaseArmourClass(agilityModifier)  + adjustAC(birthAugur, getLuckModifier(luck));
 		
-		var zeroLevelCharacter = {
+		let zeroLevelCharacter = {
 			"name": "",
 			"strength": strength,
 			"agility": agility,
@@ -319,12 +319,12 @@
 
 
 	  
-        var imgData = "images/four_character_sheet.png";
+        let imgData = "images/four_character_sheet.png";
         $("#character_sheet").attr("src", imgData);
         
 
-	  var data = [Character(),Character(),Character(),Character()];
-	  for(var index = 0; index < 4 ; index++){
+	  let data = [Character(),Character(),Character(),Character()];
+	  for(let index = 0; index < 4 ; index++){
           
           
           $("#name" + index).html(data[index].name);

@@ -2,7 +2,7 @@
   getOccupation() - returns the Randomly Generated Occupation
 */
 function getOccupation(){
-	var occupations = [
+	let occupations = [
 		{"occupation": "Ama (deep-sea pearl diver)", "race": "Human", "trainedWeapon": "Knife (as dagger)", "damage": "1d4", "tradeGoods": "Pearl"},
 		{"occupation": "Arborist", "race": "Human", "trainedWeapon": "Hand-axe", "damage": "1d6", "tradeGoods": "Pouch filled with seeds"},
 		{"occupation": "Armourer", "race": "Human", "trainedWeapon": "Hammer (as club)", "damage": "1d4", "tradeGoods": "Okashi gusoku (armour)*"},

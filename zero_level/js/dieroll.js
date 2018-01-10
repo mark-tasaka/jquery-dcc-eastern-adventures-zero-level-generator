@@ -28,18 +28,18 @@
 			baseValue = 0;
 		}
 		
-		var numbers = [];
+		let numbers = [];
 		
 
-		for(var i = 0; i < numberOfDiceRolled; i++){
+		for(let i = 0; i < numberOfDiceRolled; i++){
 			numbers[i] = Math.floor((Math.random() * 6) + 1);
 		}
 		
         numbers.sort();
         
-		var sum = baseValue;
+		let sum = baseValue;
 			
-		for(var i = numberOfDiceRemoved; i < numberOfDiceRolled; i++){
+		for(let i = numberOfDiceRemoved; i < numberOfDiceRolled; i++){
 			sum += numbers[i];
 		}
 			

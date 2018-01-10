@@ -7,7 +7,7 @@ the character received per level from their Stamina modifier and whether they ha
 */
 	  
 function hitPointAdjustPerLevel (luckySign, luckModifier) {
-   var adjust = 0;
+   let adjust = 0;
     if (luckySign != undefined && luckySign.luckySign === "Bountiful Harvest"){
         adjust = luckModifier;
      }
@@ -18,7 +18,7 @@ function hitPointAdjustPerLevel (luckySign, luckModifier) {
  getBaseArmourClass(agilityModifier)- returns the base armour class of the character
 */
 function getBaseArmourClass(agilityModifier){
-	var armourClass = 10;
+	let armourClass = 10;
 	baseArmourClass = armourClass + agilityModifier;
 	return baseArmourClass;
 }	  
@@ -27,7 +27,7 @@ function getBaseArmourClass(agilityModifier){
 getArmour (occupations) - returns the armour of the character based on their occupation.	  
 */
 function getArmour (occupations) {
-	var armour = "";
+	let armour = "";
 	if (occupations.occupation === "Armourer") {
 		armour = "*Okashi gusoku: AC +4, Check Pen -4, Speed -5', Fumble d12";
 	}
@@ -44,7 +44,7 @@ function getArmour (occupations) {
 getArmourProtection (armour) - retuns the bonus to the base armour class that the armour provides.  
 */
 function getArmourProtection (occupations) {
-	var armourProtection = 0;
+	let armourProtection = 0;
 	if (occupations.occupation === "Armourer") {
 		armourProtection = 4;
 	}
@@ -89,7 +89,7 @@ function getLanguages (occupations, bonusLanguages) {
 getBonusLanguages (intelligenceModifier, luckySign, luckModifier) - add randomly selected bonus languages base on the character's intelligence or if they have the Lucky Sign of Bird Song
 */
 function getBonusLanguages (intelligenceModifier, luckySign, luckModifier, race) {
-	var bonusLanguages = 0;
+	let bonusLanguages = 0;
 	if(bonusLanguages  != undefined && typeof bonusLanguages === 'number') {
 		bonusLanguages = intelligenceModifier;
 	}
@@ -104,14 +104,14 @@ function getBonusLanguages (intelligenceModifier, luckySign, luckModifier, race)
 	if(bonusLanguages <=0) {
 		return "";
 	}
-	var result = ", " + addBonusLanguages().language, newLanguage = "";
+	let result = ", " + addBonusLanguages().language, newLanguage = "";
 	
-	var bExtraBaseLangRace = false;
+	let bExtraBaseLangRace = false;
 	if(race === "Kitsune" || race === "Koropokuru" || race === "Tengu"){
 		bExtraBaseLangRace = true;
 	}
 	// loop
-	for(var i = 1; i < bonusLanguages; i++){
+	for(let i = 1; i < bonusLanguages; i++){
 		// 1) get a random lang
 		newLanguage = addBonusLanguages().language;
 		// 2) check the new lang is not repeative
@@ -132,7 +132,7 @@ function getBonusLanguages (intelligenceModifier, luckySign, luckModifier, race)
 getFumbleDie (armour) - returns the fumble die type based on the armour the character is wearing
 */
 function getFumbleDie (occupations) {
-	var fumbleDie = "d4"; 
+	let fumbleDie = "d4"; 
 	if (occupations.occupation === "Bandit" || occupations.occupation === "Thug") {
 		fumbleDie = "d8"; 
 	}
@@ -146,7 +146,7 @@ function getFumbleDie (occupations) {
 meleeAdjust (luckySign, luckModifier) - adds bonus/penality to Melee attack based on whether the character possesses specific Lucky Signs
 */
 function meleeAdjust (luckySign, luckModifier) {
-   var adjust = 0;
+   let adjust = 0;
     if (luckySign.luckySign != undefined && luckySign.luckySign === "Harsh winter"){
         adjust = luckModifier;
      }
@@ -161,7 +161,7 @@ function meleeAdjust (luckySign, luckModifier) {
 meleeDamageAdjust (luckySign, luckModifier) - adds bonus/penality to Melee attack based on whether the character possesses specific Lucky Signs
 */
 function meleeDamageAdjust (luckySign, luckModifier) {
-   var adjust = 0;
+   let adjust = 0;
     if (luckySign.luckySign != undefined && luckySign.luckySign === "Born on the battlefield"){
         adjust = luckModifier;
      }
@@ -177,7 +177,7 @@ function meleeDamageAdjust (luckySign, luckModifier) {
 rangeAdjust (luckySign, luckModifier) - adds bonus/penality to Range attack based on whether the character possesses specific Lucky Signs
 */	  
 function rangeAdjust (luckySign, luckModifier) {
-   var adjust = 0;
+   let adjust = 0;
     if (luckySign.luckySign != undefined && (luckySign.luckySign === "Harsh winter" || luckySign.luckySign === "Fortunate date")){
         adjust = luckModifier;
      }
@@ -189,7 +189,7 @@ function rangeAdjust (luckySign, luckModifier) {
 rangeDamageAdjust (luckySign, luckModifier) - adds bonus/penality to Melee attack based on whether the character possesses specific Lucky Signs
 */
 function rangeDamageAdjust (luckySign, luckModifier) {
-   var adjust = 0;
+   let adjust = 0;
     if (luckySign.luckySign != undefined && luckySign.luckySign === "Born on the battlefield"){
         adjust = luckModifier;
      }
@@ -205,7 +205,7 @@ function rangeDamageAdjust (luckySign, luckModifier) {
 getSpeed (occupations) returns the base speed of the character based on their race
 */
 function getSpeed (occupations) {
-	var speed = 30;
+	let speed = 30;
 	if(occupations.race === "Koropokuru") {
 		speed = 20;
 	}
@@ -219,7 +219,7 @@ function getSpeed (occupations) {
  addLuckToSpeed (luckySign, luckModifier) adds bonuses to the character's speed if they have a positive Luck Modifier and the Lucky Sign of Wild Child
 */
 function addLuckToSpeed (luckySign, luckModifier) {
-	var addSpeed = 0;
+	let addSpeed = 0;
 	if (luckySign.luckySign != undefined && luckySign.luckySign === "Wild child" && luckModifier == 1){
 		addSpeed = 5;
 	}
@@ -238,7 +238,7 @@ function addLuckToSpeed (luckySign, luckModifier) {
 adjustRef (luckySign, luckModifier) - add bonus/penality to Saving Throw based on Lucky Sign
 */
 function adjustRef (luckySign, luckModifier) {
-   var adjust = 0;
+   let adjust = 0;
     if (luckySign.luckySign != undefined && (luckySign.luckySign === "Luck sign" || luckySign.luckySign === "Struck by Lightning")){
         adjust = luckModifier;
      }
@@ -249,7 +249,7 @@ function adjustRef (luckySign, luckModifier) {
 adjustFort (luckySign, luckModifier) - add bonus/penality to Saving Throw based on Lucky Sign
 */
 function adjustFort (luckySign, luckModifier) {
-   var adjust = 0;
+   let adjust = 0;
     if (luckySign.luckySign != undefined && (luckySign.luckySign === "Luck sign" || luckySign.luckySign === "Lived through famine")){
         adjust = luckModifier;
      }
@@ -260,7 +260,7 @@ function adjustFort (luckySign, luckModifier) {
 adjustWill (luckySign, luckModifier) - add bonus/penality to Saving Throw based on Lucky Sign
 */
 function adjustWill (luckySign, luckModifier) {
-   var adjust = 0;
+   let adjust = 0;
     if (luckySign.luckySign != undefined && (luckySign.luckySign === "Luck sign" || luckySign.luckySign === "Resisted temptation")){
         adjust = luckModifier;
      }
@@ -271,7 +271,7 @@ function adjustWill (luckySign, luckModifier) {
 adjustInit (luckySign, luckModifier) - add bonus/penality to Initiative based on Lucky Sign
 */
 function adjustInit (luckySign, luckModifier) {
-   var adjust = 0;
+   let adjust = 0;
     if (luckySign.luckySign != undefined && luckySign.luckySign === "Speed of the Cobra"){
         adjust = luckModifier;
      }
@@ -283,7 +283,7 @@ function adjustInit (luckySign, luckModifier) {
 adjustAC (luckySign, luckModifier) - add bonus/penality to AC based on Lucky Sign
 */
 function adjustAC (luckySign, luckModifier) {
-   var adjust = 0;
+   let adjust = 0;
     if (luckySign.luckySign != undefined && luckySign.luckySign === "Charmed house"){
         adjust = luckModifier;
      }
@@ -294,7 +294,7 @@ function adjustAC (luckySign, luckModifier) {
 adjustCrit (luckySign, luckModifier) - add bonus/penality to Crit based on Lucky Sign
 */
 function adjustCrit (luckySign, luckModifier) {
-   var adjust = luckModifier * 1;
+   let adjust = luckModifier * 1;
     if (luckySign.luckySign != undefined && luckySign.luckySign === "Warrior's arm"){
         adjust = luckModifier * 2;
      }
@@ -305,7 +305,7 @@ function adjustCrit (luckySign, luckModifier) {
 adjustFumble (luckySign, luckModifier) - add bonus/penality to Fumble based on Lucky Sign
 */
 function adjustFumble  (luckySign, luckModifier) {
-   var adjust = luckModifier * -1;
+   let adjust = luckModifier * -1;
     if (luckySign.luckySign != undefined && luckySign.luckySign === "The Broken Star"){
         adjust = luckModifier * -2;
      }
@@ -316,7 +316,7 @@ function adjustFumble  (luckySign, luckModifier) {
 addRaceAbilities (occupations) - adds a special abilities designed if the character is a dwarf, elf or halfling
 */
 function addRaceAbilities (occupations) {
-	var raceAbilities = "";
+	let raceAbilities = "";
 	if (occupations.race === "Kitsune") {
 		raceAbilities = "Special Abilities: Shape-shifting, karma";
 	}	

@@ -2,7 +2,7 @@
 getStartingEquipment() - returns a randomly selected piece of starting equipment for the character
 */
 function getStartingEquipment(){
-	var startingEquipment = [
+	let startingEquipment = [
 		{"equipment": "Backpack"},
 		{"equipment": "Candle"},
 		{"equipment": "Chain (10 feet)"},

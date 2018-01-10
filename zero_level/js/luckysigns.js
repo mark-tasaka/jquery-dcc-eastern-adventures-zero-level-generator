@@ -1,5 +1,5 @@
 function getLuckySign(){
-    var luckySign = [
+    let luckySign = [
         {"luckySign": "Harsh winter", "luckyRoll": "All attack rolls"},
         {"luckySign": "The bull", "luckyRoll": "Melee attack rolls"},
         {"luckySign": "Fortunate date", "luckyRoll": "Missle fire attack rolls"},

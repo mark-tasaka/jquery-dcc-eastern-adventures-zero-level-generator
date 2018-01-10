@@ -1,8 +1,8 @@
      /*randomly generate the character's gender*/
       function getGender()
       {
-          var gender = "Male";
-          var random = Math.floor((Math.random() * 2) + 1);
+          let gender = "Male";
+          let random = Math.floor((Math.random() * 2) + 1);
           
           if(random === 1)
               {
@@ -16,7 +16,7 @@
       /*randomly generate name based on gender*/
       function getName(gender)
       {
-          var name = "";
+          let name = "";
           
           if(gender === "Male")
               {

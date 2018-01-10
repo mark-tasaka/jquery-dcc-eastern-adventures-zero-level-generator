@@ -1,5 +1,5 @@
 function addBonusLanguages() {
-	var bonusLanguages = [
+	let bonusLanguages = [
 		{"language": "Amabie"},
 		{"language": "Bakemono"},
 		{"language": "Kappa"},
